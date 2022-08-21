@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'userauth.apps.UserauthConfig',
     'chatApp.apps.ChatappConfig',
     'rest_framework',
+    'rest_framework.authtoken',
     'djoser',
 ]
 
@@ -85,6 +86,24 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSIONS_CLASSES': {
+        'rest_framework.permissions.IsAuthenticated',
+    }
+}
+
+AUTH_USER_MODEL = "userauth.User" 
+
+DJOSER = {
+    'SERIALIZERS': {
+        'user_create': 'userauth.serializers.UserCreationSerializer',
+        'user': 'userauth.serializers.UserCreationSerializer'
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

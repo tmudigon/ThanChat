@@ -1,12 +1,8 @@
 
-# from django.urls import path
-# from django.conf.urls import url, include
-# from rest_framework import routers
-# from .views import ChatRoomViewSet
+from django.urls import path, include
+from .views import *
 
-# router = routers.DefaultRouter()
-# router.register(r'chatRooms', ChatRoomViewSet, basename='chatRooms')
-
-# urlpatterns = [
-#     url(r'^', include(router.urls)),
-# ]
+urlpatterns = [
+    path('', include('djoser.urls')),
+    path('', include('djoser.urls.authtoken'))
+]
