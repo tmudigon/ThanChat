@@ -12,10 +12,12 @@ class ChatRoomSerializer(serializers.ModelSerializer):
         model = ChatRoom
         fields = '__all__'
 
+
 class User_ChatRoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = User_ChatRoom
         fields = '__all__'
+
 
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
