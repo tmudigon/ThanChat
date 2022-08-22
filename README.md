@@ -13,18 +13,17 @@ The following functionality has been implemented for this app:
 The following endpoints are available in this chat server implementation:
 
 #### POST create user:
-Used to create a user in the system
-
-POST http://127.0.0.1:8000/userauth/token/login
-Example body: {
-    "email": "lion@chatapp.com",
-    "username": "lion",
-    "password": "testing321",
-    "first_name": "Lion",
-    "last_name": "Zoo",
-    "phone": "1234567",
-    "address": "lion zoo street"
-}
+Used to create a user in the system\
+**POST** http://127.0.0.1:8000/userauth/token/login\
+Example body: {\
+    "email": "lion@chatapp.com",\
+    "username": "lion",\
+    "password": "testing321",\
+    "first_name": "Lion",\
+    "last_name": "Zoo",\
+    "phone": "1234567",\
+    "address": "lion zoo street"\
+}\
 
 #### POST login
 
