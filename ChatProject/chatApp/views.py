@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import User, ChatRoom, User_ChatRoom, Message
+from .models import *
 from .serializers import *
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
