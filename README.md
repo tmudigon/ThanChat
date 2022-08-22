@@ -14,17 +14,43 @@ The following endpoints are available in this chat server implementation:
 
 #### POST create user:
 Used to create a user in the system\
-**POST** http://127.0.0.1:8000/userauth/token/login\
+
+**POST** {host}/userauth/users/\
 Example body: {\
     "email": "lion@chatapp.com",\
-    "username": "lion",\
-    "password": "testing321",\
+    "username": "testuser",\
+    "password": "testpass111",\
     "first_name": "Lion",\
     "last_name": "Zoo",\
     "phone": "1234567",\
     "address": "lion zoo street"\
-}\
+}
 
 #### POST login
+Used to login a user
+
+**POST** {host}/userauth/token/login\
+Example body: {\
+    "username": "testuser",\
+    "password": "testpass111",\
+}
+
+#### POST logout
+Used to logout a user
+
+**POST** {host}/userauth/token/logout\
+Requires: Valid authorization token in header\
+
+#### POST create chat room:
+Used to create a chat room\
+Requires: Valid authorization token in header\
+
+**POST** {host}/chatApp/chatRooms/\
+Example body:  {/
+        "name": "test chat room 1",\
+        "capacity": 100,\
+        "link": "testLink@test.com",\
+        "password": "chatRoomPassword"\
+}
 
 
