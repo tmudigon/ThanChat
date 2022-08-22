@@ -2,12 +2,12 @@
 This project implements a simple chat server backend using the Django REST framework, and Djoser for authentication.
 
 The following functionality has been implemented for this app: 
-•	sign in and sign out 
-•	list existing chat rooms and create new chat rooms 
-•	post messages to any chat room (there is no need to join the room) 
-•	post messages to any other user 
-•	list messages from any chatroom 
-•	list messages posted to directly them 
+- sign in and sign out 
+- list existing chat rooms and create new chat rooms 
+- post messages to any chat room (there is no need to join the room) 
+- post messages to any other user 
+- list messages from any chatroom 
+- list messages posted to directly them 
 
 ### Endpoints
 The following endpoints are available in this chat server implementation:
